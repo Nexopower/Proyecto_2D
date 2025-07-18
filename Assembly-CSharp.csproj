@@ -48,18 +48,49 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.1.7f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SpiderController.cs" />
+    <Compile Include="Assets\Scripts\enemies\MouseController.cs" />
+    <Compile Include="Assets\Scripts\enemies\GhostController.cs" />
+    <Compile Include="Assets\Scripts\enemies\SnakeController.cs" />
+    <Compile Include="Assets\Scripts\enemies\SlimeController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\enemies\HalfSawController.cs" />
+    <Compile Include="Assets\Scripts\enemies\LavaController.cs" />
+    <Compile Include="Assets\Scripts\enemies\SawController.cs" />
+    <Compile Include="Assets\Scripts\enemies\BatController.cs" />
+    <Compile Include="Assets\Scripts\enemies\BarnacleController.cs" />
+    <Compile Include="Assets\Scripts\enemies\BlockController.cs" />
+    <Compile Include="Assets\Scripts\CamaraController.cs" />
+    <Compile Include="Assets\Scripts\enemies\FrogController.cs" />
+    <Compile Include="Assets\Scripts\enemies\SpiderController.cs" />
+    <Compile Include="Assets\Scripts\EnemyUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Base pack\Player\p2_spritesheet.txt" />
     <None Include="Assets\Sprites\kenney_new-platformer-pack-1.0\Spritesheets\spritesheet-characters-default.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Base pack\Tiles\tiles_spritesheet.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Base pack\HUD\hud_spritesheet.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Extra animations and enemies\Spritesheets\enemies.xml" />
     <None Include="Assets\Sprites\kenney_new-platformer-pack-1.0\License.txt" />
     <None Include="Assets\Sprites\kenney_new-platformer-pack-1.0\Spritesheets\spritesheet-tiles-default.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Extra animations and enemies\Spritesheets\alienGreen.xml" />
     <None Include="Assets\Sprites\kenney_new-platformer-pack-1.0\Spritesheets\spritesheet-backgrounds-double.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Extra animations and enemies\Spritesheets\alienYellow.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Base pack\Items\items_spritesheet.xml" />
     <None Include="Assets\Sprites\kenney_new-platformer-pack-1.0\Spritesheets\spritesheet-tiles-double.xml" />
     <None Include="Assets\Sprites\kenney_new-platformer-pack-1.0\Spritesheets\spritesheet-enemies-double.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Mushroom expansion\PNG\spritesheet.xml" />
     <None Include="Assets\Sprites\kenney_new-platformer-pack-1.0\Spritesheets\spritesheet-enemies-default.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Extra animations and enemies\Spritesheets\aliens.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Base pack\Player\p3_spritesheet.txt" />
     <None Include="Assets\Sprites\kenney_new-platformer-pack-1.0\Spritesheets\spritesheet-backgrounds-default.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\license.txt" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Base pack\Enemies\enemies_spritesheet.txt" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Extra animations and enemies\Spritesheets\alienPink.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Base pack\Player\p1_spritesheet.txt" />
     <None Include="Assets\Sprites\kenney_new-platformer-pack-1.0\Spritesheets\spritesheet-characters-double.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Extra animations and enemies\Spritesheets\alienBeige.xml" />
+    <None Include="Assets\Sprites\kenney_platformer-art-deluxe\Extra animations and enemies\Spritesheets\alienBlue.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

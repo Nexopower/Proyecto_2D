@@ -8,12 +8,16 @@ public class SlimeGreen : MonoBehaviour
     public bool hit = false;
     public bool canBeSquished = true;
     public bool getdamage;
-    public float fuerzarebote= 6f; // Fuerza del rebote al recibir daño
-    public float squishThreshold = 0.5f; // Umbral para determinar si el jugador está encima
+    public float fuerzarebote= 10f; // Fuerza del rebote al recibir daño
+    public float squishThreshold = 0.29f; // Umbral para determinar si el jugador está encima
     public float squishDuration = 2f; // Duración del aplastamiento
 
-    public float wallCheckDistance = 0.2f;
+    public float wallCheckDistance = 0.27f;
+    public float edgeCheckDistance = 0.5f; // Del SpiderController
+    public bool stopAtEdge = true; // Del SpiderController
     public LayerMask Wall;
+    public LayerMask groundLayer; // Del SpiderController
+    public LayerMask enemyLayer; // Del SpiderController
     
     private Animator animator;
     private Rigidbody2D rb;
@@ -36,8 +40,22 @@ public class SlimeGreen : MonoBehaviour
             if (!getdamage)
                 transform.Translate(Vector2.right * direction * movementSpeed * Time.deltaTime);
 
+            // Detección mejorada del SpiderController
+            // Verificar pared
             if (EnemyUtils.DetectWall(transform, wallCheckDistance, Wall, Vector2.right * direction))
+            {
                 EnemyUtils.Flip(transform);
+            }
+            // Verificar borde si está configurado para detenerse
+            else if (stopAtEdge && EnemyUtils.DetectEdge(transform, edgeCheckDistance, groundLayer, Vector2.right * direction))
+            {
+                EnemyUtils.Flip(transform);
+            }
+            // Verificar colisión con otros enemigos
+            else if (EnemyUtils.DetectEnemy(transform, wallCheckDistance, enemyLayer, Vector2.right * direction))
+            {
+                EnemyUtils.Flip(transform);
+            }
         }
         
         if(!playervivo || squished || hp <= 0)
@@ -147,11 +165,17 @@ public class SlimeGreen : MonoBehaviour
     
     void OnDrawGizmos()
     {
+        // Detección de pared
         Gizmos.color = Color.red;
         Vector3 dir = transform.localScale.x > 0 ? Vector3.right : Vector3.left;
         Gizmos.DrawLine(transform.position, transform.position + dir * wallCheckDistance);
         
-        // Dibujar el área de detección para aplastar
+        // Detección de borde - Del SpiderController
+        Gizmos.color = Color.blue;
+        Vector3 edgeCheckPos = transform.position + dir * 0.5f;
+        Gizmos.DrawLine(edgeCheckPos, edgeCheckPos + Vector3.down * edgeCheckDistance);
+        
+        // Dibujar el área de detección para aplastar - Específico del slime
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position + Vector3.up * squishThreshold, Vector3.one * 0.1f);
     }

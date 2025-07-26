@@ -8,8 +8,8 @@ public class BlockController : MonoBehaviour
     public float fallSpeed = 8f;
     public float riseSpeed = 2f;
     public float waitTime = 2f;
-    public float detectionWidth = 1f;
-    public float groundCheckDistance = 0.6f;
+    public float detectionWidth = 0.88f;
+    public float groundCheckDistance = 0.39f;
     public LayerMask groundLayer;
     public LayerMask playerLayer;
     

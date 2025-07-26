@@ -7,10 +7,10 @@ public class MouseController : MonoBehaviour
     public bool hit = false;
     public float movement = 1f;
     public float movementSpeed = 2f;
-    public float chaseSpeed = 4f;
-    public float detectionRange = 3f;
-    public float wallCheckDistance = 0.2f;
-    public float edgeCheckDistance = 0.5f;
+    public float chaseSpeed = 3.5f;
+    public float detectionRange = 3.08f;
+    public float wallCheckDistance = 0.32f;
+    public float edgeCheckDistance = 0.32f;
     public bool canBeSquished = true;
     public bool stopAtEdge = true;
     public float fuerzarebote = 6f;

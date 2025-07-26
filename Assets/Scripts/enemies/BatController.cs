@@ -4,14 +4,14 @@ using UnityEngine;
 public class BatController : MonoBehaviour
 {
     [Header("Bat Settings")]
-    public int hp = 1;
+    public int hp = 2;
     public bool hit = false;
     public bool player = false; // Se activa cuando detecta al jugador
     public bool isHanging = true; // Variable para animación idle colgando
     public float detectionRange = 4f;
     public float flySpeed = 3f;
     public float returnSpeed = 2f;
-    public float fuerzarebote = 6f;
+    public float fuerzarebote = 3f;
     
     private bool getdamage = false;
     private bool playervivo = true;

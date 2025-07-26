@@ -6,7 +6,7 @@ public class CamaraController : MonoBehaviour
 {
     public Transform objetivo;
     public float velocidadCamara = 0.025f;
-    public Vector3 desplazamiento;
+    public Vector3 desplazamiento = new Vector3(0, 0, -10);
 
     private void LateUpdate()
     {

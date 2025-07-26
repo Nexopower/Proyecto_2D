@@ -7,7 +7,7 @@ public class GhostController : MonoBehaviour
     public bool hit = false;
     public bool tracking = false;
     public float movementSpeed = 2f;
-    public float chaseSpeed = 4f;
+    public float chaseSpeed = 2f;
     public float detectionRange = Mathf.Infinity; // Rango infinito para detectar al jugador sin importar la distancia
     public bool canBeSquished = false;
     public float fuerzarebote = 6f;

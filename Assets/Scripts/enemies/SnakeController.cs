@@ -3,13 +3,13 @@ using UnityEngine;
 public class SnakeController : MonoBehaviour
 {
     [Header("Snake Settings")]
-    public int hp = 1;
+    public int hp = 2;
     public bool hit = false;
     public float movement = 3f; // Más rápido que el slime
-    public float movementSpeed = 3f;
-    public float wallCheckDistance = 0.2f;
-    public float edgeCheckDistance = 0.5f;
-    public bool canBeSquished = true;
+    public float movementSpeed = 3.85f;
+    public float wallCheckDistance = 0.35f;
+    public float edgeCheckDistance = 0.25f;
+    private bool canBeSquished = false;
     public bool stopAtEdge = true;
     public float fuerzarebote = 6f;
     public LayerMask wallLayer;
@@ -73,7 +73,7 @@ public class SnakeController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && canBeSquished)
+        if (collision.gameObject.CompareTag("Player"))
         {
             PlayerController playerScript = collision.gameObject.GetComponent<PlayerController>();
             Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();

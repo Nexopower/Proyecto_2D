@@ -4,11 +4,11 @@ public class PlayerController : MonoBehaviour
 {
     public float velocidad = 5f; // Velocidad de movimiento del jugador
     public int hp = 3;
-    public float fuerzaSalto = 10f; // Fuerza del salto
-    public float fuerzarebote= 6f; // Fuerza del rebote al recibir daño
-    public float longitudRayo = 0.1f; // Longitud del rayo para detectar el suelo
-    public float AnchoRayo = 0.1f; // Ancho del rayo para detectar el suelo
-    public float offsetRayoX = 0f; // Desplazamiento del rayo en el eje X
+    public float fuerzaSalto = 5f; // Fuerza del salto
+    public float fuerzarebote= 10f; // Fuerza del rebote al recibir daño
+    public float longitudRayo = 0.44f; // Longitud del rayo para detectar el suelo
+    public float AnchoRayo = 0.38f; // Ancho del rayo para detectar el suelo
+    public float offsetRayoX = -0.01f; // Desplazamiento del rayo en el eje X
     public float offsetRayoY = 0f; // Desplazamiento del rayo en el eje Y
     public LayerMask capaSuelo; // Capa del suelo para la detección
 

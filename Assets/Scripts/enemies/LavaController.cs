@@ -120,13 +120,7 @@ public class LavaController : MonoBehaviour
             }
         }
         
-        // Actualizar animator si existe
-        if (animator != null)
-        {
-            animator.SetBool("rising", isRising);
-            animator.SetBool("isUp", isUp);
-            animator.SetBool("lowering", isLowering);
-        }
+
     }
 
     void StartRising()
@@ -139,11 +133,6 @@ public class LavaController : MonoBehaviour
             Debug.Log("Lava - Started RISING (scaling up)");
         
         // Activar animación de subida si existe
-        if (animator != null)
-        {
-            animator.SetBool("rising", true);
-            animator.SetBool("lowering", false);
-        }
     }
 
     void StartLowering()
@@ -156,11 +145,7 @@ public class LavaController : MonoBehaviour
             Debug.Log("Lava - Started LOWERING (scaling down)");
         
         // Activar animación de bajada si existe
-        if (animator != null)
-        {
-            animator.SetBool("rising", false);
-            animator.SetBool("lowering", true);
-        }
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
